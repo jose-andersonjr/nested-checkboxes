@@ -20,23 +20,23 @@ const setInputState = (elemento, estado) => { // Define o estado de um elemento
   
   const updateControlador = (elemento) => { // Atualizar os atributos dos pais 
     if (elemento.hasAttribute('data-parent')) { //Se o elemento tiver o atributo data-parent
-      let owner = document.getElementById(elemento.getAttribute('data-parent')) // Pega o elemento pelo id, o id desse elemento é o conteúdo dentro de "data-parent"
-      let states = []
-      let collectiveState
-      owner.getAttribute('data-children').split(' ').every(id => {
+      let controlador = document.getElementById(elemento.getAttribute('data-parent')) // Pega o elemento pelo id, o id desse elemento é o conteúdo dentro de "data-parent"
+      let estados = []
+      let EstadoColetivo
+      controlador.getAttribute('data-children').split(' ').every(id => {
         let controlado = document.getElementById(id)
-        let state = controlado.indeterminate === true ? 'indeterminate' : controlado.checked
-        if (states.length > 0 && states.indexOf(state) === -1) {
-          collectiveState = 'indeterminate'
+        let estado = controlado.indeterminate === true ? 'indeterminate' : controlado.checked
+        if (estados.length > 0 && estados.indexOf(estado) === -1) {
+          EstadoColetivo = 'indeterminate'
           return false
         } else {
-          states.push(state)
+          estados.push(estado)
           return true
         }
       })
-      collectiveState = collectiveState || states[0]
-      setInputState(owner, collectiveState)
-      updateControlador(owner)
+      EstadoColetivo = EstadoColetivo || estados[0]
+      setInputState(controlador, EstadoColetivo)
+      updateControlador(controlador)
     }
   }
   
