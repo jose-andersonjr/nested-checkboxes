@@ -10,32 +10,6 @@
 </head>
 <body>
     <fieldset class="nested-multiselect">
-        <legend>Categories </legend>
-        <label id="label-fruit">
-          <input id="fruit" type="checkbox" name="categories" value="fruit" aria-owns="subcategories-fruit" data-children="apple orange banana"/><span>fruit</span>
-        </label>
-        <fieldset id="subcategories-fruit" aria-label="fruit subcategories">
-          <label id="label-apple">
-            <input id="apple" type="checkbox" name="categories" value="apple" aria-owns="subcategories-apple" data-parent="fruit" data-children="gala macintosh honeycrisp"/><span>apple</span>
-          </label>
-          <fieldset id="subcategories-apple" aria-label="apple subcategories">
-            <label id="label-gala">
-              <input id="gala" type="checkbox" name="categories" value="gala" data-parent="apple"/><span>gala</span>
-            </label>
-            <label id="label-macintosh">
-              <input id="macintosh" type="checkbox" name="categories" value="macintosh" data-parent="apple"/><span>macintosh</span>
-            </label>
-            <label id="label-honeycrisp">
-              <input id="honeycrisp" type="checkbox" name="categories" value="honeycrisp" data-parent="apple"/><span>honeycrisp</span>
-            </label>
-          </fieldset>
-          <label id="label-orange">
-            <input id="orange" type="checkbox" name="categories" value="orange" data-parent="fruit"/><span>orange</span>
-          </label>
-          <label id="label-banana">
-            <input id="banana" type="checkbox" name="categories" value="banana" data-parent="fruit"/><span>banana</span>
-          </label>
-        </fieldset>
         <label id="label-vegetables">
           <input id="vegetables" type="checkbox" name="categories" value="vegetables" aria-owns="subcategories-vegetables" data-children="squash peas leek"/><span>vegetables</span>
         </label>
