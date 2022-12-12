@@ -1,13 +1,16 @@
 body {
-    padding: 2rem;
-  }
-  label {
-    display: block;
-  }
-  label span:before {
-    content: ' ';
-  }
-  fieldset fieldset {
-    border: none;
-    padding: 0 0 0 1ch;
-  }
+  padding: 2rem;
+}
+
+label {
+  display: block;
+}
+
+label span:before {
+  content: ' ';
+}
+
+fieldset fieldset {
+  border: none;
+  padding: 0 0 0 1ch;
+}
